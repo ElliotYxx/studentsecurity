@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>userList</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+</head>
+<body class="container">
+<h1 align="center">用户列表</h1>
+<br/><br/>
+<div class="with:80%">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Sex</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student:${students}">
+            <th scope="row" th:text="${student.id}"></th>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.sex}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
